@@ -59,7 +59,7 @@ h2{margin:0;font-size:28px;font-weight:700}
 .offer h3{margin:0;font-size:20px;font-weight:600;line-height:1.55}
 .follow-sub{margin:0;font-size:18px;font-weight:300;color:var(--muted);align-self:flex-end}
 .platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
-.platform{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 24px;border:1px solid var(--line);border-radius:14px;background:#fff;text-decoration:none;color:var(--ink);transition:border-color .2s}
+.platform{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 24px;border:1px solid var(--line);border-radius:14px;background:var(--soft);text-decoration:none;color:var(--ink);transition:border-color .2s}
 .platform:hover{border-color:var(--red);color:var(--ink)}
 .platform b{display:block;font-size:20px}
 .platform small{display:block;font-size:14px;color:var(--link)}
@@ -80,8 +80,7 @@ footer .col a{font-size:15px;align-self:flex-start}
 footer .social a{color:#3D3C38;text-decoration:none;padding:4px 0}
 footer .social a:hover{color:var(--red)}
 .copy{margin:0;padding-block:24px 32px;border-top:1px solid var(--line);font-size:13px;color:#6B6A63}
-.ig{margin-top:48px}
-.ig-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-bottom:20px}
+.ig-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:40px}
 .ig-head h3{margin:0;font-size:20px;font-weight:600}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .ig-post{position:relative;display:block;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--line)}
@@ -152,10 +151,17 @@ footer .social a:hover{color:var(--red)}
 </div>
 </section>
 
-<section id="follow" class="soft">
+<section id="news" class="soft" hidden>
+<div class="wrap sec">
+<div class="ig-head"><div><p class="num">03</p><h2 data-i18n="igTitle">آخر الأخبار</h2></div><a class="btn btn-line" href="https://www.instagram.com/bycapture_" target="_blank" rel="noopener" data-i18n="igMore">عرض المزيد</a></div>
+<div class="ig-grid" id="igGrid"></div>
+</div>
+</section>
+
+<section id="follow">
 <div class="wrap sec">
 <div class="row">
-<div class="side"><p class="num">03</p><h2 data-i18n="followTitle">تابع كابجر</h2></div>
+<div class="side"><p class="num">04</p><h2 data-i18n="followTitle">تابع كابجر</h2></div>
 <p class="main follow-sub" data-i18n="followSub">تابع أحدث أخبارنا وتغطياتنا الاقتصادية عبر منصات التواصل الاجتماعي.</p>
 </div>
 <div class="platforms">
@@ -163,17 +169,13 @@ footer .social a:hover{color:var(--red)}
 <a class="platform" href="https://x.com/bycapture" target="_blank" rel="noopener"><span><b>X</b><small dir="ltr">@bycapture</small></span><span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg></span></a>
 <a class="platform" href="https://www.linkedin.com/company/bycapture/" target="_blank" rel="noopener"><span><b>LinkedIn</b><small dir="ltr">Capture</small></span><span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg></span></a>
 </div>
-<div class="ig" id="igBox" hidden>
-<div class="ig-head"><h3 data-i18n="igTitle">آخر منشوراتنا على انستغرام</h3><a class="btn btn-line" href="https://www.instagram.com/bycapture_" target="_blank" rel="noopener" data-i18n="igMore">عرض المزيد</a></div>
-<div class="ig-grid" id="igGrid"></div>
-</div>
 </div>
 </section>
 
 <section id="ads" class="ads">
 <div class="wrap sec ads-row">
 <div class="main">
-<p class="num">04</p>
+<p class="num">05</p>
 <h2 data-i18n="adsTitle">للإعلانات والتعاون الإعلامي</h2>
 <p class="txt" data-i18n="adsText">للتعرف على خيارات الإعلان والتعاون مع منصة كابجر الاقتصادية، تواصل مع قسم الإعلانات.</p>
 </div>
@@ -216,8 +218,8 @@ footer .social a:hover{color:var(--red)}
 <script>
 (function(){
 var T={
-ar:{brand:'كابجر',igTitle:'آخر منشوراتنا على انستغرام',igMore:'عرض المزيد',nav1:'من نحن',nav2:'ما نقدمه',nav3:'تابعنا',nav4:'الإعلانات',cta1:'تابع كابجر',cta2:'تواصل للإعلان',eyebrow:'اقتصاد | أعمال | استثمار',slogan:'نحوّل الأخبار والأرقام إلى رؤية واضحة',lead:'أخبار الشركات والأسواق وأبرز المستجدات الاقتصادية، بلغة واضحة ومختصرة.',aboutTitle:'عن المنصة',aboutText:'منصة متخصصة في المحتوى الاقتصادي، تتابع أخبار الشركات والأسواق وتقدم أبرز المستجدات بلغة واضحة ومختصرة للمهتمين بالاقتصاد والأعمال.',offerTitle:'ما الذي نقدمه؟',o1:'أخبار الاقتصاد والأعمال',o2:'أخبار الشركات وإفصاحات البورصة',o3:'مستجدات الأسواق والقطاعات الاقتصادية',o4:'مقابلات وتقارير اقتصادية',followTitle:'تابع كابجر',followSub:'تابع أحدث أخبارنا وتغطياتنا الاقتصادية عبر منصات التواصل الاجتماعي.',adsTitle:'للإعلانات والتعاون الإعلامي',adsText:'للتعرف على خيارات الإعلان والتعاون مع منصة كابجر الاقتصادية، تواصل مع قسم الإعلانات.',adsLabel:'قسم الإعلانات',mailBtn:'راسل قسم الإعلانات',download:'تحميل الملف التعريفي',contactTitle:'تواصل معنا',infoLabel:'للاستفسارات العامة',socialTitle:'حساباتنا',copy:'كابجر الاقتصادية. جميع الحقوق محفوظة.',toggle:'EN',toggleLabel:'Switch to English',title:'كابجر | Capture — اقتصاد · أعمال · استثمار'},
-en:{brand:'Capture',igTitle:'Latest on Instagram',igMore:'See more',nav1:'About',nav2:'What we offer',nav3:'Follow',nav4:'Advertising',cta1:'Follow Capture',cta2:'Advertise with us',eyebrow:'Economy | Business | Investment',slogan:'Turning news and numbers into clear insight',lead:'Company and market news and the key economic updates, in clear, concise language.',aboutTitle:'About',aboutText:'A platform dedicated to economic content, following company and market news and delivering the key updates in clear, concise language for anyone interested in the economy and business.',offerTitle:'What we offer',o1:'Economic and business news',o2:'Company news and stock-exchange disclosures',o3:'Market and sector updates',o4:'Economic interviews and reports',followTitle:'Follow Capture',followSub:'Get our latest news and economic coverage on social media.',adsTitle:'Advertising & media partnerships',adsText:'To learn about advertising and partnership options with Capture Economic, contact our advertising team.',adsLabel:'Advertising team',mailBtn:'Email the advertising team',download:'Download the media kit',contactTitle:'Contact',infoLabel:'General enquiries',socialTitle:'Our accounts',copy:'Capture Economic. All rights reserved.',toggle:'عربي',toggleLabel:'التبديل إلى العربية',title:'Capture | كابجر — Economy · Business · Investment'}
+ar:{brand:'كابجر',igTitle:'آخر الأخبار',igMore:'عرض المزيد',nav1:'من نحن',nav2:'ما نقدمه',nav3:'تابعنا',nav4:'الإعلانات',cta1:'تابع كابجر',cta2:'تواصل للإعلان',eyebrow:'اقتصاد | أعمال | استثمار',slogan:'نحوّل الأخبار والأرقام إلى رؤية واضحة',lead:'أخبار الشركات والأسواق وأبرز المستجدات الاقتصادية، بلغة واضحة ومختصرة.',aboutTitle:'عن المنصة',aboutText:'منصة متخصصة في المحتوى الاقتصادي، تتابع أخبار الشركات والأسواق وتقدم أبرز المستجدات بلغة واضحة ومختصرة للمهتمين بالاقتصاد والأعمال.',offerTitle:'ما الذي نقدمه؟',o1:'أخبار الاقتصاد والأعمال',o2:'أخبار الشركات وإفصاحات البورصة',o3:'مستجدات الأسواق والقطاعات الاقتصادية',o4:'مقابلات وتقارير اقتصادية',followTitle:'تابع كابجر',followSub:'تابع أحدث أخبارنا وتغطياتنا الاقتصادية عبر منصات التواصل الاجتماعي.',adsTitle:'للإعلانات والتعاون الإعلامي',adsText:'للتعرف على خيارات الإعلان والتعاون مع منصة كابجر الاقتصادية، تواصل مع قسم الإعلانات.',adsLabel:'قسم الإعلانات',mailBtn:'راسل قسم الإعلانات',download:'تحميل الملف التعريفي',contactTitle:'تواصل معنا',infoLabel:'للاستفسارات العامة',socialTitle:'حساباتنا',copy:'كابجر الاقتصادية. جميع الحقوق محفوظة.',toggle:'EN',toggleLabel:'Switch to English',title:'كابجر | Capture — اقتصاد · أعمال · استثمار'},
+en:{brand:'Capture',igTitle:'Latest news',igMore:'See more',nav1:'About',nav2:'What we offer',nav3:'Follow',nav4:'Advertising',cta1:'Follow Capture',cta2:'Advertise with us',eyebrow:'Economy | Business | Investment',slogan:'Turning news and numbers into clear insight',lead:'Company and market news and the key economic updates, in clear, concise language.',aboutTitle:'About',aboutText:'A platform dedicated to economic content, following company and market news and delivering the key updates in clear, concise language for anyone interested in the economy and business.',offerTitle:'What we offer',o1:'Economic and business news',o2:'Company news and stock-exchange disclosures',o3:'Market and sector updates',o4:'Economic interviews and reports',followTitle:'Follow Capture',followSub:'Get our latest news and economic coverage on social media.',adsTitle:'Advertising & media partnerships',adsText:'To learn about advertising and partnership options with Capture Economic, contact our advertising team.',adsLabel:'Advertising team',mailBtn:'Email the advertising team',download:'Download the media kit',contactTitle:'Contact',infoLabel:'General enquiries',socialTitle:'Our accounts',copy:'Capture Economic. All rights reserved.',toggle:'عربي',toggleLabel:'التبديل إلى العربية',title:'Capture | كابجر — Economy · Business · Investment'}
 };
 var btn=document.getElementById('langBtn');
 function apply(l){
@@ -242,7 +244,7 @@ var a=document.createElement('a');a.className='ig-post';a.href=p.link;a.target='
 var i=document.createElement('img');i.src=p.image;i.loading='lazy';i.alt=(p.caption||'Instagram').slice(0,120);a.appendChild(i);
 if(p.video){var s=document.createElement('span');s.className='play';s.innerHTML='<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20"/></svg>';a.appendChild(s)}
 g.appendChild(a)});
-document.getElementById('igBox').hidden=false;
+document.getElementById('news').hidden=false;
 }).catch(function(){});
 })();
 </script>
