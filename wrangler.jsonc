@@ -1,0 +1,13 @@
+{
+  "name": "capture",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "kv_namespaces": [
+    { "binding": "IG_KV", "id": "dcae943217f8484da2ac53e898bb4721" }
+  ]
+}
