@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capture Ads Signature (EN)</title>
+<style>
+body{margin:0;background:#F7F5F2;font-family:Tahoma,Arial,sans-serif;color:#141414}
+.box{max-width:720px;margin:40px auto;padding:0 16px}
+.card{background:#fff;border:1px solid #E7E4DF;border-radius:14px;padding:32px}
+.help{font-size:14px;line-height:1.9;color:#4A4944;margin-top:20px}
+button{font-family:inherit;font-size:15px;font-weight:600;background:#D62839;color:#fff;border:0;border-radius:8px;padding:12px 22px;cursor:pointer;margin-top:20px}
+#ok{margin-inline-start:12px;color:#2B7A96;font-size:14px}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="card">
+
+<!-- SIGNATURE START -->
+<div id="sig" dir="ltr" style="text-align:left">
+<table cellpadding="0" cellspacing="0" border="0" dir="ltr" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#141414;direction:ltr;text-align:left">
+<tr>
+<td valign="middle" style="padding:0 18px 0 0;border-right:2px solid #D62839">
+<a href="https://bycapture.com" target="_blank" style="text-decoration:none"><img src="https://bycapture.com/email-logo.png" width="95" height="54" alt="Capture" style="display:block;border:0;width:95px;height:54px"></a>
+</td>
+<td valign="middle" style="padding:0 0 0 18px">
+<div style="font-size:15px;font-weight:bold;color:#141414;line-height:1.6">Advertising &amp; Media Partnerships</div>
+<div style="font-size:12px;color:#D62839;font-weight:bold;line-height:1.8">Capture &nbsp;|&nbsp; Economy · Business · Investment</div>
+<div style="font-size:12px;line-height:1.9;padding-top:4px">
+<a href="mailto:ads@bycapture.com" style="color:#2B7A96;text-decoration:none">ads@bycapture.com</a>
+<span style="color:#C9C5BE">&nbsp;|&nbsp;</span>
+<a href="https://bycapture.com" target="_blank" style="color:#2B7A96;text-decoration:none">bycapture.com</a>
+</div>
+<div style="font-size:12px;line-height:1.9">
+<a href="https://www.instagram.com/bycapture_" target="_blank" style="color:#141414;text-decoration:none;font-weight:bold">Instagram</a>
+<span style="color:#C9C5BE">&nbsp;·&nbsp;</span>
+<a href="https://x.com/bycapture" target="_blank" style="color:#141414;text-decoration:none;font-weight:bold">X</a>
+<span style="color:#C9C5BE">&nbsp;·&nbsp;</span>
+<a href="https://www.linkedin.com/company/bycapture/" target="_blank" style="color:#141414;text-decoration:none;font-weight:bold">LinkedIn</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<!-- SIGNATURE END -->
+
+<button id="copy" type="button">نسخ التوقيع</button><span id="ok"></span>
+<div class="help">
+بعد النسخ: افتح Gmail بحساب ads@bycapture.com ← ⚙️ الإعدادات ← عرض كل الإعدادات ← التوقيع ← إنشاء جديد، والصق التوقيع في المربع، ثم احفظ التغييرات أسفل الصفحة.
+</div>
+</div>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+var r=document.createRange();r.selectNodeContents(document.getElementById('sig'));
+var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+var ok=false;try{ok=document.execCommand('copy')}catch(e){}
+s.removeAllRanges();
+document.getElementById('ok').textContent=ok?'تم النسخ ✓':'حدد التوقيع يدويًا وانسخه';
+});
+</script>
+</body>
+</html>
