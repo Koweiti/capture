@@ -59,7 +59,7 @@ h2{margin:0;font-size:28px;font-weight:700}
 .offer h3{margin:0;font-size:20px;font-weight:600;line-height:1.55}
 .follow-sub{margin:0;font-size:18px;font-weight:300;color:var(--muted);align-self:flex-end}
 .platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
-.platform{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 24px;border:1px solid var(--line);border-radius:14px;background:var(--soft);text-decoration:none;color:var(--ink);transition:border-color .2s}
+.platform{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 24px;border:1px solid var(--line);border-radius:14px;background:#fff;text-decoration:none;color:var(--ink);transition:border-color .2s}
 .platform:hover{border-color:var(--red);color:var(--ink)}
 .platform b{display:block;font-size:20px}
 .platform small{display:block;font-size:14px;color:var(--link)}
@@ -86,6 +86,11 @@ footer .social a:hover{color:var(--red)}
 footer .social .icons{display:flex;gap:18px}
 footer .social .icons a svg{width:22px;height:22px;display:block}
 .ticker{border-bottom:1px solid var(--line);background:#fff;min-height:46px;direction:ltr}
+.mk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:40px}
+.mk-card{border:1px solid var(--line);border-radius:16px;padding:22px 20px 12px;background:#fff;min-width:0}
+.mk-card h3{margin:0 0 12px;font-size:18px;font-weight:600}
+.mk-w{direction:ltr}.mk-tall{height:560px}
+@media (max-width:640px){.mk-grid{grid-template-columns:1fr}.mk-tall{height:500px}}
 .copy{margin:0;padding-block:24px 32px;border-top:1px solid var(--line);font-size:13px;color:#6B6A63}
 .ig-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:40px}
 .ig-head h3{margin:0;font-size:20px;font-weight:600}
@@ -220,10 +225,24 @@ footer .social .icons a svg{width:22px;height:22px;display:block}
 </div>
 </section>
 
-<section id="follow">
+<section id="markets">
+<div class="wrap sec">
+<div class="row"><div class="side"><p class="num">04</p><h2 data-i18n="mkTitle">الأسواق</h2></div><p class="main follow-sub" data-i18n="mkSub">أداء أسواق الخليج والسلع، وأبرز الأحداث الاقتصادية القادمة.</p></div>
+<div class="mk-grid">
+<div class="mk-card"><h3 data-i18n="mkGcc">أسواق الخليج</h3><div class="mk-w mk-tall"><div class="tradingview-widget-container" style="height:100%"><div class="tradingview-widget-container__widget" style="height:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+{"colorTheme": "light", "dateRange": "1M", "showChart": true, "locale": "ar_AE", "width": "100%", "height": "100%", "largeChartUrl": "", "isTransparent": true, "showSymbolLogo": true, "showFloatingTooltip": true, "plotLineColorGrowing": "rgba(214,40,57,1)", "plotLineColorFalling": "rgba(214,40,57,1)", "gridLineColor": "rgba(231,228,223,0)", "scaleFontColor": "rgba(74,73,68,1)", "belowLineFillColorGrowing": "rgba(214,40,57,0.12)", "belowLineFillColorFalling": "rgba(214,40,57,0.12)", "belowLineFillColorGrowingBottom": "rgba(214,40,57,0)", "belowLineFillColorFallingBottom": "rgba(214,40,57,0)", "symbolActiveColor": "rgba(214,40,57,0.08)", "tabs": [{"title": "أسواق الخليج", "symbols": [{"s": "KSE:BKP", "d": "الكويت — السوق الأول"}, {"s": "TADAWUL:TASI", "d": "السعودية — تاسي"}, {"s": "DFM:DFMGI", "d": "دبي — المؤشر العام"}, {"s": "ADX:FADGI", "d": "أبوظبي — المؤشر العام"}, {"s": "QSE:GNRI", "d": "قطر — المؤشر العام"}, {"s": "BAHRAIN:BHBX", "d": "البحرين — المؤشر العام"}], "originalTitle": "GCC"}, {"title": "سلع وعملات", "symbols": [{"s": "TVC:UKOIL", "d": "نفط برنت"}, {"s": "TVC:USOIL", "d": "نفط غرب تكساس"}, {"s": "TVC:GOLD", "d": "الذهب"}, {"s": "FX_IDC:USDKWD", "d": "الدولار / دينار كويتي"}], "originalTitle": "Commodities"}]}
+</script></div></div></div>
+<div class="mk-card"><h3 data-i18n="mkCal">الأجندة الاقتصادية</h3><div class="mk-w mk-tall"><div class="tradingview-widget-container" style="height:100%"><div class="tradingview-widget-container__widget" style="height:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+{"colorTheme": "light", "isTransparent": true, "width": "100%", "height": "100%", "locale": "ar_AE", "importanceFilter": "0,1", "countryFilter": "kw,sa,ae,qa,bh,om,us,eu"}
+</script></div></div></div>
+</div>
+</div>
+</section>
+
+<section id="follow" class="soft">
 <div class="wrap sec">
 <div class="row">
-<div class="side"><p class="num">04</p><h2 data-i18n="followTitle">تابع كابجر</h2></div>
+<div class="side"><p class="num">05</p><h2 data-i18n="followTitle">تابع كابجر</h2></div>
 <p class="main follow-sub" data-i18n="followSub">تابع أحدث أخبارنا وتغطياتنا الاقتصادية عبر منصات التواصل الاجتماعي.</p>
 </div>
 <div class="platforms">
@@ -237,7 +256,7 @@ footer .social .icons a svg{width:22px;height:22px;display:block}
 <section id="ads" class="ads">
 <div class="wrap sec ads-row">
 <div class="main">
-<p class="num">05</p>
+<p class="num">06</p>
 <h2 data-i18n="adsTitle">للإعلانات والتعاون الإعلامي</h2>
 <p class="txt" data-i18n="adsText">للتعرف على خيارات الإعلان والتعاون مع منصة كابجر الاقتصادية، تواصل مع قسم الإعلانات.</p>
 </div>
@@ -282,8 +301,8 @@ footer .social .icons a svg{width:22px;height:22px;display:block}
 <script>
 (function(){
 var T={
-ar:{brand:'كابجر',igTitle:'آخر الأخبار',igMore:'عرض المزيد',nav1:'من نحن',nav2:'ما نقدمه',nav3:'تابعنا',nav4:'الإعلانات',cta1:'تابع كابجر',cta2:'تواصل للإعلان',eyebrow:'اقتصاد | أعمال | استثمار',slogan:'نحوّل الأخبار والأرقام إلى رؤية واضحة',lead:'أخبار الشركات والأسواق وأبرز المستجدات الاقتصادية، بلغة واضحة ومختصرة.',aboutTitle:'عن المنصة',aboutText:'منصة متخصصة في المحتوى الاقتصادي، تتابع أخبار الشركات والأسواق وتقدم أبرز المستجدات بلغة واضحة ومختصرة للمهتمين بالاقتصاد والأعمال.',offerTitle:'ما الذي نقدمه؟',o1:'أخبار الاقتصاد والأعمال',o2:'أخبار الشركات وإفصاحات البورصة',o3:'مستجدات الأسواق والقطاعات الاقتصادية',o4:'مقابلات وتقارير اقتصادية',followTitle:'تابع كابجر',followSub:'تابع أحدث أخبارنا وتغطياتنا الاقتصادية عبر منصات التواصل الاجتماعي.',adsTitle:'للإعلانات والتعاون الإعلامي',adsText:'للتعرف على خيارات الإعلان والتعاون مع منصة كابجر الاقتصادية، تواصل مع قسم الإعلانات.',adsLabel:'قسم الإعلانات',mailBtn:'راسل قسم الإعلانات',download:'تحميل الملف التعريفي',contactTitle:'تواصل معنا',infoLabel:'للاستفسارات العامة',socialTitle:'حساباتنا',copy:'كابجر الاقتصادية. جميع الحقوق محفوظة.',toggle:'EN',toggleLabel:'Switch to English',title:'كابجر | Capture — اقتصاد · أعمال · استثمار'},
-en:{brand:'Capture',igTitle:'Latest news',igMore:'See more',nav1:'About',nav2:'What we offer',nav3:'Follow',nav4:'Advertising',cta1:'Follow Capture',cta2:'Advertise with us',eyebrow:'Economy | Business | Investment',slogan:'Turning news and numbers into clear insight',lead:'Company and market news and the key economic updates, in clear, concise language.',aboutTitle:'About',aboutText:'A platform dedicated to economic content, following company and market news and delivering the key updates in clear, concise language for anyone interested in the economy and business.',offerTitle:'What we offer',o1:'Economic and business news',o2:'Company news and stock-exchange disclosures',o3:'Market and sector updates',o4:'Economic interviews and reports',followTitle:'Follow Capture',followSub:'Get our latest news and economic coverage on social media.',adsTitle:'Advertising & media partnerships',adsText:'To learn about advertising and partnership options with Capture Economic, contact our advertising team.',adsLabel:'Advertising team',mailBtn:'Email the advertising team',download:'Download the media kit',contactTitle:'Contact',infoLabel:'General enquiries',socialTitle:'Our accounts',copy:'Capture Economic. All rights reserved.',toggle:'عربي',toggleLabel:'التبديل إلى العربية',title:'Capture | كابجر — Economy · Business · Investment'}
+ar:{brand:'كابجر',mkTitle:'الأسواق',mkSub:'أداء أسواق الخليج والسلع، وأبرز الأحداث الاقتصادية القادمة.',mkGcc:'أسواق الخليج',mkCal:'الأجندة الاقتصادية',igTitle:'آخر الأخبار',igMore:'عرض المزيد',nav1:'من نحن',nav2:'ما نقدمه',nav3:'تابعنا',nav4:'الإعلانات',cta1:'تابع كابجر',cta2:'تواصل للإعلان',eyebrow:'اقتصاد | أعمال | استثمار',slogan:'نحوّل الأخبار والأرقام إلى رؤية واضحة',lead:'أخبار الشركات والأسواق وأبرز المستجدات الاقتصادية، بلغة واضحة ومختصرة.',aboutTitle:'عن المنصة',aboutText:'منصة متخصصة في المحتوى الاقتصادي، تتابع أخبار الشركات والأسواق وتقدم أبرز المستجدات بلغة واضحة ومختصرة للمهتمين بالاقتصاد والأعمال.',offerTitle:'ما الذي نقدمه؟',o1:'أخبار الاقتصاد والأعمال',o2:'أخبار الشركات وإفصاحات البورصة',o3:'مستجدات الأسواق والقطاعات الاقتصادية',o4:'مقابلات وتقارير اقتصادية',followTitle:'تابع كابجر',followSub:'تابع أحدث أخبارنا وتغطياتنا الاقتصادية عبر منصات التواصل الاجتماعي.',adsTitle:'للإعلانات والتعاون الإعلامي',adsText:'للتعرف على خيارات الإعلان والتعاون مع منصة كابجر الاقتصادية، تواصل مع قسم الإعلانات.',adsLabel:'قسم الإعلانات',mailBtn:'راسل قسم الإعلانات',download:'تحميل الملف التعريفي',contactTitle:'تواصل معنا',infoLabel:'للاستفسارات العامة',socialTitle:'حساباتنا',copy:'كابجر الاقتصادية. جميع الحقوق محفوظة.',toggle:'EN',toggleLabel:'Switch to English',title:'كابجر | Capture — اقتصاد · أعمال · استثمار'},
+en:{brand:'Capture',mkTitle:'Markets',mkSub:'GCC markets and commodities, plus the key economic events ahead.',mkGcc:'GCC markets',mkCal:'Economic calendar',igTitle:'Latest news',igMore:'See more',nav1:'About',nav2:'What we offer',nav3:'Follow',nav4:'Advertising',cta1:'Follow Capture',cta2:'Advertise with us',eyebrow:'Economy | Business | Investment',slogan:'Turning news and numbers into clear insight',lead:'Company and market news and the key economic updates, in clear, concise language.',aboutTitle:'About',aboutText:'A platform dedicated to economic content, following company and market news and delivering the key updates in clear, concise language for anyone interested in the economy and business.',offerTitle:'What we offer',o1:'Economic and business news',o2:'Company news and stock-exchange disclosures',o3:'Market and sector updates',o4:'Economic interviews and reports',followTitle:'Follow Capture',followSub:'Get our latest news and economic coverage on social media.',adsTitle:'Advertising & media partnerships',adsText:'To learn about advertising and partnership options with Capture Economic, contact our advertising team.',adsLabel:'Advertising team',mailBtn:'Email the advertising team',download:'Download the media kit',contactTitle:'Contact',infoLabel:'General enquiries',socialTitle:'Our accounts',copy:'Capture Economic. All rights reserved.',toggle:'عربي',toggleLabel:'التبديل إلى العربية',title:'Capture | كابجر — Economy · Business · Investment'}
 };
 var btn=document.getElementById('langBtn');
 function apply(l){
